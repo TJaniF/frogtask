@@ -1,0 +1,71 @@
+.label {
+    font: 20px "Helvetica";
+}
+
+.inputTask {
+    width: 50%;
+}
+
+.container {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 23px 23px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". . . . ."
+      ". Task Task Task ."
+      ". Timer Timer Timer ."
+      ". . TogglePopup . ."
+      ". . Completion . ."
+      ". . Sharing . ."
+      ". . InfoBox . ."
+      ". . . . .";
+  }
+  
+  .Task {
+    grid-area: Task;
+  }
+  
+  .TaskTitle { grid-area: TaskTitle; }
+  
+  .TaskField { grid-area: TaskField; }
+  
+  .TaskLock { grid-area: TaskLock; }
+  
+  .TogglePopup { grid-area: TogglePopup; justify-self: center;}
+  
+  .Completion { grid-area: Completion; justify-self: center;}
+  
+  .Sharing { grid-area: Sharing; justify-self: center;}
+  
+  .InfoBox { grid-area: InfoBox; justify-self: center;}
+  
+  .Timer {  
+    grid-area: Timer;
+  }
+  
+  .TimerTitle { grid-area: TimerTitle; }
+  
+  .TimerHours { grid-area: TimerHours; }
+  
+  .TimerMinutes { grid-area: TimerMinutes; }
+  
+  .TimerLock { grid-area: TimerLock; }
+  
+  
+.TaskForm {display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 10px 10px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "TaskTitle TaskField TaskField TaskLock";}
+
+
+.TimerForm {display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 10px 10px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "TimerTitle TimerHours TimerMinutes TimerLock";}
